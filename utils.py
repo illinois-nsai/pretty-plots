@@ -1,3 +1,5 @@
+import numpy as np
+
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -62,6 +64,38 @@ MARKER = [
     'H',
     'p',
 ]
+
+
+def cdf_helper(data, bins=None):
+    '''
+    Helper function to compute CDF probabilities.
+
+    :param data: array of data points (shape: (1, N))
+    :param bins: 1) None (raw/exact CDF), or 2) number of bins (binned CDF), or
+                 3) right edges of bins (binned CDF); first bin: (-inf, bins[0])
+    '''
+
+    samples = len(data)
+    if samples == 0:
+        raise ValueError('No data points to compute CDF')
+    data = np.array(data)
+
+    if bins is None:
+        sorted_data = np.sort(data)
+        cdf_probs = (1 + np.arange(samples)) / samples
+        return sorted_data, cdf_probs
+    else:
+        if type(bins) == int:
+            bins = np.linspace(data.min(), data.max(), bins)
+        else:  # assume bins is a sorted list of bin edges
+            bins = np.array(bins)
+
+        cdf_probs = np.zeros(len(bins))
+        for i, bin_edge in enumerate(bins):
+            cdf_probs[i] = np.sum(data <= bin_edge)
+        cdf_probs /= samples
+
+        return bins, cdf_probs
 
 
 def save_figures(fig, file_stem):
