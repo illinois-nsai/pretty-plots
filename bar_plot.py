@@ -44,7 +44,7 @@ def main():
     ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
 
     # save in SVG, PDF, and PNG formats
-    save_figures(fig, 'example_bar')
+    save_figures(fig, 'examples/bar')
 
 
 if __name__ == '__main__':

@@ -39,7 +39,7 @@ def main():
     ax.set_ylabel('Metric Y')
 
     # save in SVG, PDF, and PNG formats
-    save_figures(fig, 'example_scatter')
+    save_figures(fig, 'examples/scatter')
 
 
 if __name__ == '__main__':

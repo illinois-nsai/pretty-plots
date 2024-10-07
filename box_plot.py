@@ -49,7 +49,7 @@ def main():
     ax.set_ylabel('Value')
 
     # save in SVG, PDF, and PNG formats
-    save_figures(fig, 'example_box')
+    save_figures(fig, 'examples/box')
 
 
 if __name__ == '__main__':
