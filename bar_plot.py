@@ -28,7 +28,7 @@ def main():
     for i in range(classes):
         ax.bar(x[i], y_mean[i], yerr=y_err[i],
                label=f'Class{i}',
-               color=f'C{i}',
+               color=COLOR[i],
                hatch=HATCH[i],
                edgecolor='0.1',  # edge color (grayscale 0.1)
                linewidth=1,      # edge width

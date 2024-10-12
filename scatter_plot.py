@@ -24,7 +24,7 @@ def main():
 
     for i in range(classes):
         ax.scatter(x[i], y[i],
-                   color=f'C{i}',
+                   color=COLOR[i],
                    marker=MARKER[i],
                    clip_on=False)
 

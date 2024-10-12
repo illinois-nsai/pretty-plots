@@ -1,7 +1,7 @@
 import numpy as np
 
-import matplotlib as mpl
-mpl.use('Agg')
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 # default figure parameters
@@ -22,6 +22,20 @@ plt.rcParams.update({
 # color palette
 import seaborn as sns
 sns.set_palette('deep')  # or 'muted', 'colorblind'
+
+# colors
+COLOR = [
+    'C0',  # '#4c72b0'
+    'C1',  # '#dd8452'
+    'C2',  # '#55a868'
+    'C3',  # '#c44e52'
+    'C4',  # '#8172b3'
+    'C5',  # '#937860'
+    'C6',  # '#da8bc3'
+    'C7',  # '#8c8c8c'
+    'C8',  # '#ccb974'
+    'C9',  # '#64b5cd'
+]
 
 # hatch style
 HATCH = [

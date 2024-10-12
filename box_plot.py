@@ -28,8 +28,8 @@ def main():
     fig, ax = plt.subplots()
 
     for i in range(classes):
-        color = f'C{i}'
-        bg_color = mpl.colors.to_rgba(color, alpha=0.2)  # background color
+        color = COLOR[i]
+        bg_color = matplotlib.colors.to_rgba(color, alpha=0.2)
         lw = 2  # line width
 
         ax.boxplot(

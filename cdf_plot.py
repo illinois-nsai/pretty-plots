@@ -28,7 +28,7 @@ def main():
         x, y = cdf_helper(data[i], bins=100)
         ax.plot(x, y,
                 label=f'Class{i}',
-                color=f'C{i}',
+                color=COLOR[i],
                 linestyle=LINESTYLE[i],
                 clip_on=False)
 

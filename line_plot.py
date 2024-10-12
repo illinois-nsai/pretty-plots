@@ -30,7 +30,7 @@ def main():
     for i in range(classes):
         ax.plot(x, y[i],
                 label=f'Class{i}',
-                color=f'C{i}',
+                color=COLOR[i],
                 linestyle=LINESTYLE[i],
                 marker=MARKER[i],
                 clip_on=False)

@@ -30,14 +30,14 @@ def main():
     for i in range(classes):
         violin = ax.violinplot([data[i]], positions=[i])
         config = violin['bodies'][0]
-        config.set_facecolor(f'C{i}')
-        config.set_edgecolor(f'C{i}')
+        config.set_facecolor(COLOR[i])
+        config.set_edgecolor(COLOR[i])
 
     # customize the markers for medians
     for i in range(classes):
         median = np.median(data[i])
         ax.scatter(i, median,
-                   color=f'C{i}',
+                   color=COLOR[i],
                    marker='o',
                    s=30)
 
