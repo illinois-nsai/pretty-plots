@@ -1,4 +1,4 @@
-# Pretty Plots @ Bonsai Group
+# Pretty Plots
 
 This repository contains scripts for plotting "publication-quality" figures
 with the `matplotlib` library in Python.
@@ -6,11 +6,15 @@ with the `matplotlib` library in Python.
 
 ## Usage
 
-1. Install the required Python packages:
+The following usage is tested on Ubuntu 24.04.
+
+1. Install required Python packages:
 
     ```shell
     pip install -r requirements.txt
     ```
+
+    * Pass `--break-system-packages` to the above command if you are comfortable with installing the required packages system-wide. Otherwise, create a Python [virtual environment](https://docs.python.org/3/library/venv.html).
 
 2. Confirm that the "Times New Roman" font is installed on your system:
 
@@ -28,19 +32,20 @@ with the `matplotlib` library in Python.
         # clear matplotlib's cache
         rm -r ~/.cache/matplotlib
         ```
-        Next, restart the Python interpreter and find the font again.
-        Example output of a successful installation is
+
+        Restart the Python interpreter and try to find the font again.
+        Expected output is
         `/usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf`.
 
     * Alternatively, install LaTeX and set `'text.usetex': True` in `utils.py`.
       LaTeX fonts such as "Times New Roman" and "Computer Modern" should now be
-      available, but text rendering will be slower.
+      available. However, text rendering will be slower.
 
 3.  Edit figure parameters in `utils.py` as needed,
     and run the desired plotting script (e.g., `./line_plot.py`).
 
 
-## Examples
+## Example figures
 
 ### Line plot
 
