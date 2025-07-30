@@ -17,6 +17,7 @@ plt.rcParams.update({
     'lines.linewidth': 2,
     'lines.markersize': 10,
     'svg.fonttype': 'none',
+    'pdf.fonttype': 42, # TrueType
 })
 
 # color palette
